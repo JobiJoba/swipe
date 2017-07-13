@@ -24,12 +24,24 @@ export default class App extends React.Component {
     );
   }
 
+  renderNoMoreCards() {
+    return (
+      <Card title="All Done!">
+        <Text>
+          No more content
+        </Text>
+        <Button title='click me'/>
+      </Card>
+    );
+  }
+
   render() {
     return (
       <View style={styles.container}>
         <Deck
           data={DATA}
           renderCard={this.renderCard}
+          renderNoMoreCards={this.renderNoMoreCards}
         >
         </Deck>
       </View>
